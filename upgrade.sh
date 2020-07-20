@@ -5,7 +5,7 @@
 FILE_NAME=`find *.trx`
 FILE_NAME_WITH_PATH=`realpath $FILE_NAME`
 # SET SSH ID & PWD on ASUS ROUTER
-ID='YOUR ID'
+ID='jisung'
 
 # SET ROUTER ADDRESS & PORT
 ADDRESS='YOUR ADDRESS'
@@ -20,5 +20,5 @@ scp -P $PORT $FILE_NAME $ID@$ADDRESS:$REMOTE_LOCATION
 
 # UPGRADE
 echo ssh $ID@$ADDRESS -p $PORT 'mtd-write2 $FILE_NAME linux && reboot'
-ssh $ID@$ADDRESS -p $PORT 'mtd-write2 $FILE_NAME linux && reboot'
+ssh $ID@$ADDRESS -p $PORT 'mtd-write2' $FILE_NAME 'linux && reboot'
 
