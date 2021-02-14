@@ -3,7 +3,8 @@
 # SET FIRMWARE NAME
 # default = find file in same folder *.trx
 FILE_NAME=`find *.trx`
-FILE_NAME_WITH_PATH=`realpath $FILE_NAME`
+
+# FILE_NAME_WITH_PATH=`realpath $FILE_NAME`
 
 
 # SET SSH ID & PWD on ASUS ROUTER
@@ -14,6 +15,8 @@ read -p "ID: " ID
 read -p "ADDRESS: " ADDRESS
 read -p "PORT: " PORT
 read -p "Remote Location (DEFAULT: ~): " REMOTE_LOCATION
+
+# SET DEFAULT VALUE
 REMOTE_LOCATION=${REMOTE_LOCATION:-'~'}
 
 
